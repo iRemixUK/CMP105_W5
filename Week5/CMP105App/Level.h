@@ -5,6 +5,7 @@
 #include "Framework/GameObject.h"
 #include "Zombie.h"
 #include "Mario.h"
+#include "Soldier.h"
 #include <string>
 #include <iostream>
 
@@ -28,6 +29,8 @@ private:
 	Input* input;
 	Zombie zombie;
 	Mario mario;
+	Soldier soldier;
+	sf::Texture soldierTexture;
 	sf::Texture marioTexture;
 	sf::Texture zombTexture;
 };
