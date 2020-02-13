@@ -10,6 +10,7 @@ Level::Level(sf::RenderWindow* hwnd, Input* in)
 	zombie.setSize(sf::Vector2f(55, 108)); 
 	zombie.setPosition(100, 100); 
 	zombie.setTexture(&zombTexture);
+	zombie.setInput(input);
 }
 
 Level::~Level()
@@ -27,6 +28,7 @@ void Level::handleInput(float dt)
 void Level::update(float dt)
 {
 	zombie.update(dt);
+	zombie.move(zombie.getSpeedX() * dt, 0);
 }
 
 // Render level

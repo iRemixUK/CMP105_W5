@@ -9,8 +9,14 @@ public:
 	~Zombie();
 
 	void update(float dt) override;
+	float getSpeedX();
 
 protected:
 	Animation walk;
+	Animation* currentAnimation;
+
+private:
+	float speedx;
+	float speedy;
 };
 
